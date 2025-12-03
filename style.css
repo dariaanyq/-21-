@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    width: 80%;
+    max-width: 900px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    gap: 120px;   
+}
+
+.player {
+    width: 50%;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+}
+
+.cards img {
+    width: 90px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.15s ease-in-out;
+}
+
+.cards img:hover {
+    transform: scale(1.08);
+}
+
+button {
+    background-color: #4d8eff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #2b6eef;
+}
+
+button:disabled {
+    background-color: #9dbdff;
+    cursor: not-allowed;
+}
+
+#result {
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .scoreboard {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .player {
+        width: 100%;
+    }
+
+    .cards img {
+        width: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        width: 95%;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    button {
+        width: 100%;
+        font-size: 15px;
+        padding: 8px;
+    }
+    .cards img {
+        width: 60px;
+    }
+    #result {
+        font-size: 18px;
+    }
+}
